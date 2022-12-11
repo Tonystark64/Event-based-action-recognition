@@ -2,6 +2,7 @@
 ## Action Recognition with event-based camera data in Jupyter notebook   
 The code is forked and modified from MMACTION TSM video understanding  
 https://github.com/open-mmlab/mmaction2/blob/master/configs/recognition/tsm/README.md  
+You may check the code implementation in [EventFrame.ipynb](./EventFrame.ipynb)
 * We reconstructed event-based data to frames and apply TSM to event-generated frames, grayscale frames and RGB frames.  
 * With data augmentation skills, the accuracy of action recognition can be on par with grayscale frames, or even RGB frames. For example, the horizonal flipping of event data can improve the ability of the model to distinguish among horizontal actions like pushing, boxing, etc.
 <!-- [IMAGE] -->
