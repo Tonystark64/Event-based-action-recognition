@@ -10,8 +10,11 @@ You may check the code implementation in [EventFrame.ipynb](./EventFrame.ipynb)
 <img src="./graph/horizontalFlip.JPG" width="300"/>
 </div>    
 
+* Some actions are direction-insensitive (does not matter from left to right or from right to left) while some other are direction-sensitive (sit down/stand up). When applying flipping augmentation, we need to be careful about the types of actions.  
+
 * We also investigated how the event-frame should be generated and how to augment grayscale frames with event points to achieve improvements.  
 * We evaluate the size of event and grayscale data. Empirically, using DAVIS default 346x260 25fps grayscale frame as example, it takes about 0.4--0.6 second for the event data to fill up a frame. Each event data itself is a binary value plus 3D spatial-temporal coordinates (X,Y,T). Say it takes 0.4 second to fill up a frame, then it requires 9-bit, 9-bit, 19-bit to store X,Y,T respectively because event data has microsecond level of temporal resolution. While for 25fps grayscale images, there are 10 frames in 0.4 second so in each location the required bit is 8x10=80 which is larger than event data 1+9+9+19=38. However, this is only a very coarse and simple caculation and in reality, numerous mature frame-based compression algorihtms (e.g. H.264) can be applied to reduce the size but we do not have many off-the-shelf compression algorihtms specifically for event data.   
+* There is indeed redundancy in event data also. In spatial domain, the stripes or patterns on the clothes can generate dense points in an area but not very useful for action recognition. In temporal domain, microsecond level resolution is far more enough to recognize even some high-speed actions. 
 
 From below demonstration, we can see that in a fixed frame per (FPS) second scheme, with positive event point adding one, negative event point subtracting one, we can render an event-frame close to a binary image with noises strongly reduced. While the action part is obviously shown.    
 <!-- [IMAGE] -->
