@@ -34,5 +34,7 @@ If we want to augment the RGB frame, extra sensor fusion work is required which 
 <img src="./graph/RGB_point_mismatch.JPG" width="300"/>
 </div>
 
+## References  
 [1] Lin, Ji and Gan, Chuang and Han, Song, "TSM: Temporal Shift Module for Efficient Video Understanding", in Proceedings of the IEEE International Conference on Computer Vision, 2019, lin2019tsm   
-[2] Xiaolong Wang and Ross Girshick and Abhinav Gupta and Kaiming He, "Non-local Neural Networks", CVPR, 2018, NonLocal2018
+[2] Xiaolong Wang and Ross Girshick and Abhinav Gupta and Kaiming He, "Non-local Neural Networks", CVPR, 2018, NonLocal2018   
+[3] MMAction2 Contributors. (2020). OpenMMLab's Next Generation Video Understanding Toolbox and Benchmark [Computer software]. https://github.com/open-mmlab/mmaction2
