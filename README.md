@@ -3,7 +3,7 @@
 The code is forked and modified from MMACTION TSM video understanding  
 https://github.com/open-mmlab/mmaction2/blob/master/configs/recognition/tsm/README.md  
 * We reconstructed event-based data to frames and apply TSM to event-generated frames, grayscale frames and RGB frames.  
-* With data augmentation skills, the accuracy of action recognition can be on par with grayscale frames, or even RGB frames.  
+* With data augmentation skills, the accuracy of action recognition can be on par with grayscale frames, or even RGB frames. For example, the horizonal flipping of event data can improve the ability of the model to distinguish among horizontal actions like pushing, boxing, etc.    
 * We also investigated how the event-frame should be generated and how to augment grayscale frames with event points to achieve improvements.  
 
 From below demonstration, we can see that in a fixed frame per (FPS) second scheme, with positive event point adding one, negative event point subtracting one, we can render an event-frame close to a binary image with noises strongly reduced. While the action part is obviously shown.    
